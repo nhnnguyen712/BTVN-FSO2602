@@ -1,0 +1,135 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: "Mulish", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e6f0ff, #ede7ff);
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  width: 1000px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== MENU ===== */
+.menu {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.menu span {
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover + Active */
+.menu span:hover,
+.menu .active {
+  background: #eff1ff;
+}
+
+/* ===== AUTH ===== */
+.auth {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-weight: 700;
+}
+
+.auth button {
+  background: #0f0f34;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth button:hover {
+  opacity: 0.85;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown {
+  position: relative;
+}
+
+/* MENU BOX */
+.dropdown-menu {
+  position: absolute;
+  top: 45px;
+  left: 0;
+
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+
+  display: flex;
+  gap: 40px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.3s;
+}
+
+/* MENU TO */
+.dropdown-menu.big {
+  width: 350px;
+}
+
+/* SHOW */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ===== COLUMN ===== */
+.col h4 {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.col p {
+  font-size: 14px;
+  margin: 6px 0;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+/* Hover item */
+.col p:hover {
+  background: #eff1ff;
+}
+
+/* Highlight */
+.highlight {
+  background: #eff1ff;
+}

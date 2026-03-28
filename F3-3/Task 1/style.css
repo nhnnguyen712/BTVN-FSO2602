@@ -1,0 +1,136 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #e6eaf8;
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+h1,
+h3 {
+  font-family: "Merriweather", serif;
+  color: #151b32;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  background: #fff;
+  border-radius: 16px;
+  padding: 50px;
+  width: 1100px;
+}
+
+/* ===== HEADER ===== */
+h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* ===== SEARCH ===== */
+.top-bar input {
+  width: 280px;
+  padding: 12px;
+  border: 1px solid #bfc8e6;
+  border-radius: 6px;
+  outline: none;
+}
+
+/* ===== TABS ===== */
+.tabs {
+  display: flex;
+  gap: 16px;
+}
+
+.tabs span {
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.tabs span:hover,
+.tabs .active {
+  background: #849fff;
+  color: #fff;
+  opacity: 1;
+}
+
+/* ===== USER GRID ===== */
+.users {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* ===== CARD ===== */
+.card {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 16px;
+  background: #fbfcff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* Hover + Active chung */
+.card:hover,
+.card.active {
+  border: 1px solid #bfc8e6;
+  box-shadow: 0 8px 20px rgba(218, 224, 249, 0.7);
+  transform: translateY(-3px);
+}
+
+/* Avatar */
+.card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* Text */
+.card h3 {
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 5px 0 10px;
+}
+
+/* ===== TAGS ===== */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tags span {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid #bfc8e6;
+  color: #516fd5;
+  background: #fff;
+}

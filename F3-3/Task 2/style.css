@@ -1,0 +1,139 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f3f6ff;
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+h1 {
+  font-family: "Merriweather", serif;
+  font-size: 32px;
+  color: #1e2246;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(180, 191, 225, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover + Active */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== CARD TOP ===== */
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.card h3 {
+  font-size: 22px;
+  color: #1e2246;
+}
+
+/* ===== ICON ===== */
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+}
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon i {
+  font-size: 26px;
+  color: black;
+}
+
+/* màu nền */
+.icon.blue {
+  background: linear-gradient(135deg, #cfd2ff, #b3b6e6);
+}
+
+/* Gradient màu */
+.blue {
+  background: linear-gradient(135deg, #bbcbfb, #f1d5ff);
+}
+.pink {
+  background: linear-gradient(135deg, #fbbbda, #ffd5d5);
+}
+.purple {
+  background: linear-gradient(135deg, #bbebfb, #efd5ff);
+}
+.green {
+  background: linear-gradient(135deg, #bbfbe4, #d5e0ff);
+}
+.mix {
+  background: linear-gradient(135deg, #bbd8fb, #ffd5d5);
+}
+.orange {
+  background: linear-gradient(135deg, #ffdec7, #d5d9ff);
+}
+
+/* ===== BUTTON ===== */
+.btn {
+  padding: 14px;
+  border: 1px solid #c2c5e2;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover */
+.btn:hover {
+  background: #1e2246;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(30, 34, 70, 0.3);
+}
+
+/* Active */
+.btn.dark {
+  background: #1e2246;
+  color: #fff;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  color: #1e2246;
+  opacity: 0.7;
+  max-width: 700px;
+  margin-inline: auto;
+}

@@ -1,0 +1,150 @@
+* {
+  font-family: "Poppins", sans-serif;
+  color: #191847;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.product {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  max-width: 887px;
+  width: 100%;
+  padding: 40px;
+  gap: 40px;
+}
+
+.product-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-img img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.product-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.badge {
+  background-color: #191847;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.price-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #64748b;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.price {
+  font-size: 48px;
+  font-weight: 700;
+  margin: -8px 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin-top: -4px;
+}
+
+.btn-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  gap: 10px;
+  background-color: #4788e9;
+  border-radius: 8px;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0px 7px 0px 0px #1c57ee;
+  transition: all 0.1s ease;
+}
+
+.btn-primary:active {
+  transform: translateY(7px);
+  box-shadow: 0px 0px 0px 0px transparent;
+}
+
+.stock-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  margin-top: 4px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btn-secondary {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: transparent;
+  border: 1px solid #c9c9da;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dot {
+  width: 13px;
+  height: 13px;
+  background-color: #00d98b;
+  border-radius: 50%;
+}
