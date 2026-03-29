@@ -1,28 +1,27 @@
-name: Tự động Deploy lên cPanel
+name: Deploy Website qua SFTP
 
-# Workflow này chạy mỗi khi bạn "push" code vào nhánh main
 on:
   push:
     branches:
-      - main
+      - main # Hoặc tên branch bạn đang dùng
 
 jobs:
-  web-deploy:
-    name: Deploying...
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Lấy code mới nhất từ GitHub
+      - name: 🚚 Lấy code từ GitHub
         uses: actions/checkout@v3
 
-      - name: Đồng bộ file qua FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: 🚀 Đẩy code lên cPanel qua SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
+          server: ${{ secrets.FTP_SERVER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 22 # Chuyển từ 21 sang 22
-          protocol: ftp # Chuyển từ ftp sang sftp
-          # Thư mục trên hosting nơi bạn muốn chứa code (thường là public_html)
-          server-dir: fso2602.nyugn217.site/public_html/
-          # Nếu bạn muốn xóa các file trên host không có trong GitHub, hãy để true (Cẩn thận!)
-          dangerous-clean-slate: false
+          port: 22
+          # '.' nghĩa là lấy toàn bộ file trong GitHub
+          local_path: "./"
+          # Đường dẫn tuyệt đối trên server (dựa vào FileZilla của bạn)
+          remote_path: "/home/hgjcyw5/fso2602.nyugn217.site/public_html/"
+          # Giữ lại các file đã có trên server, chỉ ghi đè file mới
+          delete_remote_files: true
