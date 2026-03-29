@@ -23,4 +23,4 @@ jobs:
           # Thư mục trên hosting nơi bạn muốn chứa code (thường là public_html)
           server-dir: fso2602.nyugn217.site/public_html/
           # Nếu bạn muốn xóa các file trên host không có trong GitHub, hãy để true (Cẩn thận!)
-          delete-destination-prevent-alleles: true
+          dangerous-clean-slate: false
