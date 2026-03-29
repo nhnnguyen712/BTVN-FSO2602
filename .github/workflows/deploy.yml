@@ -1,0 +1,26 @@
+name: Tự động Deploy lên cPanel
+
+# Workflow này chạy mỗi khi bạn "push" code vào nhánh main
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  web-deploy:
+    name: Deploying...
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Lấy code mới nhất từ GitHub
+        uses: actions/checkout@v3
+
+      - name: 📂 Đồng bộ file qua FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # Thư mục trên hosting nơi bạn muốn chứa code (thường là public_html)
+          server-dir: fso2602.nyugn217.site/public_html/
+          # Nếu bạn muốn xóa các file trên host không có trong GitHub, hãy để true (Cẩn thận!)
+          delete-destination-prevent-alleles: true
