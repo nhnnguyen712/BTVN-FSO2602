@@ -11,10 +11,10 @@ jobs:
     name: Deploying...
     runs-on: ubuntu-latest
     steps:
-      - name: 🚚 Lấy code mới nhất từ GitHub
+      - name: Lấy code mới nhất từ GitHub
         uses: actions/checkout@v3
 
-      - name: 📂 Đồng bộ file qua FTP
+      - name: Đồng bộ file qua FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
