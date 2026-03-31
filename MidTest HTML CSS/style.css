@@ -96,7 +96,6 @@ body {
 
 .item:hover {
   transform: translateY(-5px);
-  border: 1px solid #dbd5ec;
   box-shadow: 0px 14px 16px rgba(41, 11, 128, 0.1);
 }
 
