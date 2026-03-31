@@ -3,7 +3,7 @@ name: Deploy Website qua SFTP
 on:
   push:
     branches:
-      - main # Hoặc tên branch bạn đang dùng
+      - main
 
 jobs:
   deploy:
@@ -11,6 +11,14 @@ jobs:
     steps:
       - name: 🚚 Lấy code từ GitHub
         uses: actions/checkout@v3
+
+      - name: 🧹 Dọn dẹp file thừa (.git, .github, README...)
+        # Lệnh này xóa các file thừa trên máy ảo GitHub trước khi upload
+        run: |
+          rm -rf .git
+          rm -rf .github
+          rm -f README.md
+          rm -f .gitignore
 
       - name: 🚀 Đẩy code lên cPanel qua SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
@@ -20,9 +28,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
-          # '.' nghĩa là lấy toàn bộ file trong GitHub
           local_path: "./"
-          # Đường dẫn tuyệt đối trên server (dựa vào FileZilla của bạn)
           remote_path: "/home/nyugn217/fso2602.nyugn217.site/public_html/"
-          # Giữ lại các file đã có trên server, chỉ ghi đè file mới
+          # Nên để false để an toàn, không xóa file có sẵn trên hosting
           delete_remote_files: true
