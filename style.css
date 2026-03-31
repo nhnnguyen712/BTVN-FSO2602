@@ -1,61 +1,377 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #dfe3e8;
+/* ==========================================================================
+   CSS Variables (Design Tokens) - Quản lý màu sắc và spacing đồng bộ
+   ========================================================================== */
+:root {
+  /* Colors */
+  --bg-main: #f8fafc; /* Màu nền tổng thể sáng sủa, hiện đại */
+  --bg-card: #ffffff; /* Nền thẻ màu trắng */
+  --text-main: #0f172a; /* Chữ chính màu đen/slate sâu */
+  --text-muted: #64748b; /* Chữ phụ màu xám slate */
+  --primary: #0ea5e9; /* Xanh dương hiện đại (accent) */
+  --primary-hover: #0284c7;
+  --border-color: #e2e8f0;
+
+  /* Spacing & Layout */
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --container-width: 1000px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   Reset & Base Styles
+   ========================================================================== */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* căn giữa toàn bộ */
+body {
+  /* Sử dụng System UI fonts thay vì tải font ngoài -> siêu nhanh, siêu mượt */
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em; /* Kerning hiện đại */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
 .container {
-  max-width: 900px;
-  margin: 80px auto;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: rgba(248, 250, 252, 0.8);
+  backdrop-filter: blur(12px); /* Hiệu ứng kính mờ chuẩn Apple */
+  border-bottom: 1px solid var(--border-color);
+  z-index: 100;
+  padding: 16px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.05em;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 24px;
+}
+
+.navbar nav a {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.navbar nav a:hover {
+  color: var(--primary);
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero {
+  padding: 120px 24px;
   text-align: center;
+  max-width: 800px;
 }
 
-/* tiêu đề */
-h1 {
-  margin-bottom: 10px;
+.greeting {
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
 }
 
-p {
-  color: #555;
-  margin-bottom: 30px;
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive typography */
+  margin-bottom: 24px;
+  background: linear-gradient(90deg, #0f172a, #334155);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* bảng */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: #fff;
-  border-radius: 10px;
+.hero .bio {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--text-main);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+
+.btn-outline:hover {
+  border-color: var(--text-main);
+  background-color: var(--text-main);
+  color: white;
+}
+
+/* ==========================================================================
+   Projects Section
+   ========================================================================== */
+.section-header {
+  margin-bottom: 48px;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.section-header p {
+  color: var(--text-muted);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  height: 420px;
   overflow: hidden;
 }
 
+/* Micro-interaction: Hover Card */
+.card:hover {
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.1);
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #f1f5f9;
+  color: var(--text-muted);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.card-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+.card-body {
+  margin-top: auto;
+  /* THÊM DÒNG NÀY: Để body tự động lấp đầy khoảng trống */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Đẩy danh sách link xuống dưới cùng */
+  overflow: hidden; /* Quan trọng để cuộn được bên trong */ /* Push list to bottom */
+}
+
+/* Task Links */
 .task-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
+
+.task-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--bg-main);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
 .task-list a:hover {
-  background: #eee;
+  background: white;
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
-/* header */
-thead {
-  background: #eee;
+.task-list svg {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: var(--transition);
 }
 
-th,
-td {
-  padding: 12px;
-  border: 1px solid #ccc;
+.task-list a:hover svg {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-/* hover */
-tr:hover {
-  background: #f5f5f5;
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+  padding: 80px 0 40px;
+  text-align: center;
+  background: #f1f5f9;
+  margin-top: 40px;
 }
 
-/* link */
-a {
-  color: blue;
+.footer h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.footer p {
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.footer-links a {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* ==========================================================================
+   Responsive (Mobile First Approach)
+   ========================================================================== */
+@media (max-width: 600px) {
+  .hero {
+    padding: 80px 16px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .card {
+    padding: 24px;
+  }
+}
+
+/* ==========================================================================
+   CẤU HÌNH CUỘN MƯỢT (SMOOTH SCROLLING)
+   ========================================================================== */
+html {
+    /* 1. Bật hiệu ứng lướt mượt mà cho toàn bộ trang */
+    scroll-behavior: smooth;
+    
+    /* 2. PRO-TIP: Bù trừ chiều cao của thanh Menu (Navbar) */
+    /* Khi cuộn đến section, nó sẽ chừa ra 80px ở trên cùng để Menu không đè mất tiêu đề */
+    scroll-padding-top: 80px; 
+}
+
+/* 1. Ẩn trên Chrome, Safari và Opera */
+.task-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* 2. Ẩn trên Firefox, IE và Edge */
+.task-list {
+    -ms-overflow-style: none;  /* IE và Edge */
+    scrollbar-width: none;     /* Firefox */
+    
+    /* Đảm bảo vẫn bật tính năng cuộn */
+    overflow-y: auto; 
 }

@@ -2,88 +2,221 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <title>Quản Lý Nộp Bài Tập</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nguyễn Huỳnh Nhật Nguyên | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Nguyễn Huỳnh Nhật Nguyên</h1>
-      <p>Tiến độ nộp bài và các liên kết theo từng buổi học.</p>
+    <header class="navbar">
+      <div class="container nav-container">
+        <div class="logo">Nhật Nguyên.</div>
+        <nav>
+          <!-- <a href="#about">About</a> -->
+          <a href="#projects">Projects</a>
+          <!-- <a href="#contact">Contact</a> -->
+        </nav>
+      </div>
+    </header>
 
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Tên bài tập</th>
-            <th>Link</th>
-            <th>Ghi chú</th>
-          </tr>
-        </thead>
+    <!-- <section id="about" class="hero container">
+      <div class="hero-content">
+        <p class="greeting">Xin chào, tôi là</p>
+        <h1>Nguyễn Huỳnh Nhật Nguyên</h1>
+        <p class="bio">
+          Sinh viên năm 2 chuyên ngành Công nghệ Thông tin tại TP. Hồ Chí Minh.
+          Tôi đam mê Lập trình Web và thiết kế giao diện (UI/UX) tối giản, mang
+          lại trải nghiệm tốt nhất cho người dùng.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Xem Dự Án</a>
+          <a href="mailto:emailcuaban@gmail.com" class="btn btn-outline"
+            >Liên Hệ Nhận CV</a
+          >
+        </div>
+      </div>
+    </section> -->
 
-        <tbody>
-          <tr>
-            <td>F3-1</td>
-            <td>
-              Xây dựng các giao diện đơn giản với HTML/CSS thuần (level 1)
-            </td>
-            <td>
-              <div class="task-list">
+    <main id="projects" class="container section">
+      <div class="section-header">
+        <h2>Dự án & Bài tập</h2>
+        <p>Quá trình học tập và xây dựng giao diện từ cơ bản đến nâng cao.</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="card">
+          <div class="card-header">
+            <span class="badge">Module F3-1</span>
+            <h3>HTML/CSS Thuần (Level 1)</h3>
+            <p>Xây dựng các thành phần giao diện cơ bản.</p>
+          </div>
+          <div class="card-body">
+            <ul class="task-list">
+              <li>
                 <a href="./F3-1/Task 1/index.html" target="_blank">
                   Product Info UI Design
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
                 </a>
+              </li>
+              <li>
                 <a href="./F3-1/Task 2/index.html" target="_blank">
                   Login Form
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
                 </a>
+              </li>
+              <li>
                 <a href="./F3-1/Task 3/index.html" target="_blank">
                   Collections List
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
                 </a>
-              </div>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>F3-3</td>
-            <td>
-              Xây dựng các giao diện với HTML/CSS thuần (level 2 - flexbox)
-            </td>
-            <td>
-              <div class="task-list">
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <span class="badge">Module F3-3</span>
+            <h3>Flexbox Layouts (Level 2)</h3>
+            <p>
+              Ứng dụng CSS Flexbox để giải quyết các bài toán dàn trang phức tạp
+              và responsive đa màn hình.
+            </p>
+          </div>
+          <div class="card-body">
+            <ul class="task-list">
+              <li>
                 <a href="./F3-3/Task 1/index.html" target="_blank">
                   Users List Day
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
                 </a>
+              </li>
+              <li>
                 <a href="./F3-3/Task 2/index.html" target="_blank">
                   Job Cards Day
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
                 </a>
-              </div>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>F3-4</td>
-            <td>Các bài tập sử dụng position</td>
-            <td>
-              <a href="./F3-4/index.html" target="_blank"> Menu Navigation </a>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td>
-              <a href="./MidTest HTML CSS/index.html" target="_blank">
-                Mid test
-              </a>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <span class="badge">Module F3-4</span>
+            <h3>CSS Positioning</h3>
+            <p>
+              Làm chủ các thuộc tính Position (Relative, Absolute, Fixed,
+              Sticky) trong thiết kế giao diện động.
+            </p>
+          </div>
+          <div class="card-body">
+            <ul class="task-list">
+              <li>
+                <a href="./F3-4/index.html" target="_blank">
+                  Menu Navigation
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <span class="badge">Mid Test</span>
+            <h3>Mid Test HTML/CSS</h3>
+            <p>Đánh giá kỹ năng xây dựng giao diện bằng HTML/CSS.</p>
+          </div>
+          <div class="card-body">
+            <ul class="task-list">
+              <li>
+                <a href="./MidTest HTML CSS/index.html" target="_blank">
+                  Mid Test HTML/CSS
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer id="contact" class="footer">
+      <div class="container">
+        <!-- <h2>Let's connect</h2>
+        <p>Sẵn sàng cho các cơ hội thực tập và dự án mới.</p>
+        <div class="footer-links">
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Behance</a>
+        </div> -->
+        <p class="copyright">
+          &copy; 2026 Nguyễn Huỳnh Nhật Nguyên. Design by Stitch AI
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
