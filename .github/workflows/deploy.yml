@@ -15,6 +15,7 @@ jobs:
       - name: 🚀 Đẩy code lên cPanel qua SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
           username: ${{ secrets.FTP_USERNAME }}
           server: ${{ secrets.FTP_SERVER }}
           password: ${{ secrets.FTP_PASSWORD }}
@@ -22,6 +23,6 @@ jobs:
           # '.' nghĩa là lấy toàn bộ file trong GitHub
           local_path: "./"
           # Đường dẫn tuyệt đối trên server (dựa vào FileZilla của bạn)
-          remote_path: "/home/hgjcyw5/fso2602.nyugn217.site/public_html/"
+          remote_path: "/home/nyugn217/fso2602.nyugn217.site/public_html/"
           # Giữ lại các file đã có trên server, chỉ ghi đè file mới
           delete_remote_files: true
