@@ -66,12 +66,10 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-
 .icon i {
   font-size: 26px;
   color: black;
 }
-
 .icon.blue {
   background: linear-gradient(135deg, #cfd2ff, #b3b6e6);
 }

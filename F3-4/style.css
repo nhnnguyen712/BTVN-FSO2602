@@ -1,11 +1,9 @@
-/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== BASE ===== */
 body {
   font-family: "Mulish", sans-serif;
   height: 100vh;
@@ -15,7 +13,6 @@ body {
   background: linear-gradient(135deg, #e6f0ff, #ede7ff);
 }
 
-/* ===== NAVBAR ===== */
 .navbar {
   width: 1000px;
   background: #fff;
@@ -26,7 +23,6 @@ body {
   align-items: center;
 }
 
-/* ===== MENU ===== */
 .menu {
   display: flex;
   gap: 25px;
@@ -42,13 +38,11 @@ body {
   transition: 0.3s;
 }
 
-/* Hover + Active */
 .menu span:hover,
 .menu .active {
   background: #eff1ff;
 }
 
-/* ===== AUTH ===== */
 .auth {
   display: flex;
   gap: 20px;
@@ -70,12 +64,10 @@ body {
   opacity: 0.85;
 }
 
-/* ===== DROPDOWN ===== */
 .dropdown {
   position: relative;
 }
 
-/* MENU BOX */
 .dropdown-menu {
   position: absolute;
   top: 45px;
@@ -96,19 +88,16 @@ body {
   transition: 0.3s;
 }
 
-/* MENU TO */
 .dropdown-menu.big {
   width: 350px;
 }
 
-/* SHOW */
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-/* ===== COLUMN ===== */
 .col h4 {
   font-size: 12px;
   text-transform: uppercase;
@@ -124,12 +113,10 @@ body {
   transition: 0.2s;
 }
 
-/* Hover item */
 .col p:hover {
   background: #eff1ff;
 }
 
-/* Highlight */
 .highlight {
   background: #eff1ff;
 }
