@@ -1,0 +1,184 @@
+body {
+  max-width: 1512px;
+  margin: 0 auto;
+  padding: 40px 120px;
+  font-family: "Poppins";
+  background-color: #f0e8e2;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+nav {
+  display: flex;
+  gap: 50px;
+}
+
+a {
+  font-size: 16px;
+  padding: 0 4px;
+  border-bottom: 2px solid transparent;
+}
+
+a:hover {
+  border-bottom: 3px solid #000;
+  font-weight: 600;
+}
+
+.btn-header {
+  padding: 12px 36px;
+  border: 1px solid #000;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 5fr 5fr;
+  align-items: center;
+  column-gap: 80px;
+}
+
+.hero-image-group {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  min-height: 500px;
+}
+
+.hero-img {
+  border-radius: 100%;
+  margin-right: 40px;
+  z-index: 1;
+}
+
+.play-btn {
+  position: absolute;
+  width: 84.8px;
+  height: 80px;
+  border-radius: 50%;
+  z-index: 4;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.info-card {
+  position: absolute;
+  width: 190.8px;
+  height: 130px;
+  z-index: 5;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.hero span {
+  display: block;
+}
+
+.hero h2 {
+  font-weight: 600;
+  font-size: 55px;
+  margin-bottom: 30px;
+}
+
+.hero p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  color: #9b948e;
+  margin-bottom: 50px;
+}
+
+.btn-primary {
+  width: 170px;
+  height: 70px;
+  background: #96c67f;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+}
+
+.brands {
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section-title {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px 60px;
+}
+
+.brand-grid img {
+  height: 30px;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin: 70px auto;
+}
+
+.cta p {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.cta h2 {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.card-body {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+}
+
+.card-body h3 {
+  font-weight: 600;
+  font-size: 20px;
+  background-color: inherit;
+}
+
+.card-body p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #9b948e;
+  background-color: inherit;
+}
