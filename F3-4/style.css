@@ -38,8 +38,7 @@ body {
   transition: 0.3s;
 }
 
-.menu span:hover,
-.menu .active {
+.menu span:hover {
   background: #eff1ff;
 }
 
@@ -72,24 +71,16 @@ body {
   position: absolute;
   top: 45px;
   left: 0;
-
   background: #fff;
   padding: 20px;
   border-radius: 15px;
-
   display: flex;
   gap: 40px;
-
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
   transition: 0.3s;
-}
-
-.dropdown-menu.big {
-  width: 350px;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -114,9 +105,5 @@ body {
 }
 
 .col p:hover {
-  background: #eff1ff;
-}
-
-.highlight {
   background: #eff1ff;
 }
