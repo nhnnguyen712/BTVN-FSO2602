@@ -1,5 +1,5 @@
 body {
-  font-family: Arial
+  font-family: Arial;
 }
 
 .banner img {
@@ -9,7 +9,7 @@ body {
 
 .navbar {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   padding: 20px;
   background: #fff;
@@ -27,7 +27,7 @@ body {
   justify-content: center;
   gap: 30px;
   list-style: none;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .navbar li {
@@ -37,7 +37,7 @@ body {
 }
 
 .navbar li:hover {
-  color: #FFA800;
+  color: #ffa800;
 }
 
 .champions {
@@ -55,6 +55,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .card img {
@@ -67,8 +68,8 @@ body {
   background: #0e4c67;
   padding: 28px;
   display: flex;
-  justify-content: center; 
-  align-items: center;  
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-weight: bold;
   color: #fff;
@@ -81,7 +82,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .footer-left {
@@ -128,7 +129,7 @@ body {
 
 .video-container {
   width: 100%;
-  aspect-ratio: 16 / 9; 
+  aspect-ratio: 16 / 9;
 }
 
 .video-container iframe {
@@ -156,9 +157,9 @@ body {
 
 @media (max-width: 768px) {
   .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
   }
 
   .navbar ul {
