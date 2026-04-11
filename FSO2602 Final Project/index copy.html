@@ -1,0 +1,710 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary": "#ffffff",
+              "surface-container": "#f0edec",
+              "error-container": "#ffdad6",
+              surface: "#fcf9f8",
+              outline: "#76777c",
+              "on-surface": "#1c1b1b",
+              error: "#ba1a1a",
+              "secondary-container": "#fed488",
+              "on-primary": "#ffffff",
+              "surface-tint": "#575f6d",
+              "inverse-surface": "#313030",
+              "surface-container-highest": "#e5e2e1",
+              "outline-variant": "#c6c6cc",
+              "surface-bright": "#fcf9f8",
+              secondary: "#775a19",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed": "#141c28",
+              "on-tertiary-container": "#6b8e8e",
+              "inverse-on-surface": "#f3f0ef",
+              primary: "#020813",
+              "surface-container-low": "#f6f3f2",
+              "surface-dim": "#dcd9d9",
+              "on-background": "#1c1b1b",
+              "secondary-fixed-dim": "#e9c176",
+              "secondary-fixed": "#ffdea5",
+              "on-secondary-fixed-variant": "#5d4201",
+              "surface-variant": "#e5e2e1",
+              "on-secondary-container": "#785a1a",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#bfc7d7",
+              "on-tertiary-fixed": "#002020",
+              tertiary: "#000b0b",
+              "on-tertiary": "#ffffff",
+              "primary-fixed": "#dbe3f3",
+              "inverse-primary": "#bfc7d7",
+              "on-primary-fixed-variant": "#3f4754",
+              background: "#fcf9f8",
+              "on-primary-container": "#808897",
+              "on-secondary-fixed": "#261900",
+              "tertiary-fixed": "#c5eae9",
+              "tertiary-fixed-dim": "#a9cdcd",
+              "primary-container": "#18202c",
+              "on-tertiary-fixed-variant": "#2a4c4c",
+              "surface-container-high": "#ebe7e7",
+              "tertiary-container": "#002525",
+              "on-surface-variant": "#45474c",
+              "on-error-container": "#93000a",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      .display-text {
+        font-family: "Manrope", sans-serif;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface selection:bg-secondary-container">
+    <!-- TopNavBar -->
+    <header
+      class="bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl fixed top-0 w-full z-50 shadow-sm dark:shadow-none tonal-shift surface-container-low"
+    >
+      <nav
+        class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto"
+      >
+        <div
+          class="text-2xl font-bold tracking-tighter text-slate-950 dark:text-white"
+        >
+          Digital Atelier
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            class="text-slate-500 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-300 ease-in-out hover:text-amber-600"
+            href="#"
+            >Shop</a
+          >
+          <a
+            class="text-slate-950 dark:text-white font-semibold border-b-2 border-amber-600 pb-1 transition-colors duration-300 ease-in-out hover:text-amber-600"
+            href="#"
+            >Collections</a
+          >
+          <a
+            class="text-slate-500 dark:text-slate-400 font-medium hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-300 ease-in-out hover:text-amber-600"
+            href="#"
+            >Archive</a
+          >
+        </div>
+        <div class="flex items-center space-x-4">
+          <!-- Search Bar Component -->
+          <div class="relative hidden sm:block">
+            <input
+              class="w-48 lg:w-64 bg-slate-100 dark:bg-slate-800 border-none rounded-full py-2 pl-4 pr-10 text-sm focus:ring-2 focus:ring-amber-600 transition-all font-body"
+              placeholder="Search..."
+              type="search"
+            />
+            <span
+              class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg"
+              data-icon="search"
+              >search</span
+            >
+          </div>
+          <div class="flex items-center space-x-1">
+            <button
+              class="p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-all duration-200 active:opacity-80 active:scale-95"
+            >
+              <span
+                class="material-symbols-outlined text-slate-900 dark:text-slate-50"
+                data-icon="favorite"
+                >favorite</span
+              >
+            </button>
+            <button
+              class="p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-all duration-200 active:opacity-80 active:scale-95"
+            >
+              <span
+                class="material-symbols-outlined text-slate-900 dark:text-slate-50"
+                data-icon="shopping_bag"
+                >shopping_bag</span
+              >
+            </button>
+            <button
+              class="p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-all duration-200 active:opacity-80 active:scale-95"
+            >
+              <span
+                class="material-symbols-outlined text-slate-900 dark:text-slate-50"
+                data-icon="account_circle"
+                >account_circle</span
+              >
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Main Content -->
+    <main class="max-w-[1440px] mx-auto px-8 pt-32 pb-12">
+      <div class="flex flex-col lg:flex-row gap-12">
+        <!-- Left Sidebar Filters -->
+        <aside class="w-full lg:w-64 space-y-10">
+          <div>
+            <h3 class="font-headline text-lg font-bold mb-6 tracking-tight">
+              Category
+            </h3>
+            <div class="space-y-4">
+              <label class="flex items-center group cursor-pointer">
+                <input
+                  class="rounded border-outline-variant text-primary focus:ring-secondary w-5 h-5 transition-all"
+                  type="checkbox"
+                />
+                <span
+                  class="ml-3 font-body text-sm text-on-surface-variant group-hover:text-on-surface"
+                  >Apparel</span
+                >
+              </label>
+              <label class="flex items-center group cursor-pointer">
+                <input
+                  class="rounded border-outline-variant text-primary focus:ring-secondary w-5 h-5 transition-all"
+                  type="checkbox"
+                />
+                <span
+                  class="ml-3 font-body text-sm text-on-surface-variant group-hover:text-on-surface"
+                  >Accessories</span
+                >
+              </label>
+              <label class="flex items-center group cursor-pointer">
+                <input
+                  class="rounded border-outline-variant text-primary focus:ring-secondary w-5 h-5 transition-all"
+                  type="checkbox"
+                />
+                <span
+                  class="ml-3 font-body text-sm text-on-surface-variant group-hover:text-on-surface"
+                  >Living</span
+                >
+              </label>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-headline text-lg font-bold mb-6 tracking-tight">
+              Price Range
+            </h3>
+            <div class="px-2">
+              <input
+                class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-secondary"
+                max="1000"
+                min="0"
+                step="50"
+                type="range"
+              />
+              <div
+                class="flex justify-between mt-4 font-body text-xs text-on-surface-variant"
+              >
+                <span>$0</span>
+                <span>$1000+</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-headline text-lg font-bold mb-6 tracking-tight">
+              Color
+            </h3>
+            <div class="grid grid-cols-5 gap-3">
+              <button
+                class="w-8 h-8 rounded-full bg-slate-900 ring-offset-2 ring-2 ring-transparent hover:ring-outline transition-all"
+                title="Midnight"
+              ></button>
+              <button
+                class="w-8 h-8 rounded-full bg-stone-200 ring-offset-2 ring-2 ring-transparent hover:ring-outline transition-all"
+                title="Sand"
+              ></button>
+              <button
+                class="w-8 h-8 rounded-full bg-[#775a19] ring-offset-2 ring-2 ring-transparent hover:ring-outline transition-all"
+                title="Bronze"
+              ></button>
+              <button
+                class="w-8 h-8 rounded-full bg-emerald-900 ring-offset-2 ring-2 ring-transparent hover:ring-outline transition-all"
+                title="Forest"
+              ></button>
+              <button
+                class="w-8 h-8 rounded-full bg-rose-200 ring-offset-2 ring-2 ring-transparent hover:ring-outline transition-all"
+                title="Blush"
+              ></button>
+            </div>
+          </div>
+        </aside>
+        <!-- Product Display Area -->
+        <section class="flex-1">
+          <!-- Top Bar -->
+          <div
+            class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-10 gap-4"
+          >
+            <p class="font-body text-sm text-on-surface-variant">
+              Showing
+              <span class="font-bold text-on-surface">24</span> architectural
+              objects
+            </p>
+            <div class="flex items-center gap-6">
+              <div class="relative group">
+                <select
+                  class="appearance-none bg-transparent font-body text-sm pr-8 py-2 focus:outline-none border-b-2 border-outline-variant focus:border-secondary transition-colors cursor-pointer"
+                >
+                  <option>Sort by: Newest</option>
+                  <option>Price: Low to High</option>
+                  <option>Price: High to Low</option>
+                  <option>Most Popular</option>
+                </select>
+                <span
+                  class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 text-sm pointer-events-none"
+                  data-icon="expand_more"
+                  >expand_more</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-16 gap-x-8"
+          >
+            <!-- Product Card 1 -->
+            <div class="group relative flex flex-col">
+              <div
+                class="aspect-[4/5] bg-surface-container-low overflow-hidden rounded-xl mb-6 relative"
+              >
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Minimalist high-end black designer chair in a bright studio with soft natural lighting and neutral background"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWUOao5UlWGHHrZhcdnIKmaFZlk-rkYSeLq7Ka1sf8NmYr2zmjX0BKEGjYSqDWkiUSIukKuVbUx96GLQQtEKWYMdhLyaopONlQH28CL2UD7YFEGNAihs_Uz-zj0CluNASG-1KZ_lZGlB8FmVR5ETEkrZuebReBYj8cj7yEZl0GLsogS27qI0u_ZyGETNN1gsiBcJ8xndHVXd3wCu1sNo0jENLGzub26OGXcsiNxJNaNog7HALPZkP_JMngZiMgYgA2uF2kCNwK3b5a"
+                />
+                <div
+                  class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6"
+                >
+                  <button
+                    class="w-full bg-primary text-on-primary py-4 font-body font-semibold rounded-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center justify-center gap-2"
+                  >
+                    <span
+                      class="material-symbols-outlined text-sm"
+                      data-icon="shopping_cart"
+                      >shopping_cart</span
+                    >
+                    Quick Add
+                  </button>
+                </div>
+                <span
+                  class="absolute top-4 left-4 bg-secondary text-on-secondary px-3 py-1 text-[10px] font-bold tracking-widest uppercase rounded"
+                  >Limited</span
+                >
+              </div>
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4
+                    class="font-headline font-bold text-lg leading-tight mb-1 group-hover:text-secondary transition-colors cursor-pointer"
+                  >
+                    The Sculptural Seat
+                  </h4>
+                  <p class="font-body text-sm text-on-surface-variant">
+                    Brushed Ash &amp; Canvas
+                  </p>
+                </div>
+                <p class="font-headline font-extrabold text-lg">$850</p>
+              </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="group relative flex flex-col">
+              <div
+                class="aspect-[4/5] bg-surface-container-low overflow-hidden rounded-xl mb-6 relative"
+              >
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Close up of a luxury minimalist ceramic vase set with organic textures in warm beige tones and elegant silhouettes"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0dDLU1L5OckEFT1_74g9Fk2g_GDVuRT8N-_LcDqbQbShSgq2UDbL8Xf3fec-ZtRCOwCPoEOC05gg4pV7xNoFIigfoargcxw8kV9h7UG2PLiIS9hMG-Bds3qAVvMozJZi_VCfeyhTRD4DKIjoxJmnMpp5b8Yp_aSaa-_1xuRmqGmRdUlEePSJa3y-toE3bdxpRF1PmXjQtT6XWwShqO42Bi0j0l9DfZP2gwv13YoF1agdbqSlraN9nFKOWBIlD4Fzw8f6pofF63ELC"
+                />
+                <div
+                  class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6"
+                >
+                  <button
+                    class="w-full bg-primary text-on-primary py-4 font-body font-semibold rounded-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center justify-center gap-2"
+                  >
+                    <span
+                      class="material-symbols-outlined text-sm"
+                      data-icon="shopping_cart"
+                      >shopping_cart</span
+                    >
+                    Quick Add
+                  </button>
+                </div>
+              </div>
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4
+                    class="font-headline font-bold text-lg leading-tight mb-1 group-hover:text-secondary transition-colors cursor-pointer"
+                  >
+                    Orb Vessel Set
+                  </h4>
+                  <p class="font-body text-sm text-on-surface-variant">
+                    Matte Stoneware
+                  </p>
+                </div>
+                <p class="font-headline font-extrabold text-lg">$320</p>
+              </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="group relative flex flex-col">
+              <div
+                class="aspect-[4/5] bg-surface-container-low overflow-hidden rounded-xl mb-6 relative"
+              >
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Exquisite glass carafe and tumblers on a dark marble surface with dramatic side lighting and deep shadows"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIECkyEBwAeu7-Nf2oqUPZtf-vWF7JzO2N5bnVXdnK-GJ3C4AcdSwNSX-AQ1RFayIZ4I9-410y7W71c5TPIqr6GFuXTGKw1NQRLnsIZwnYz1sUdfnK-jHQw0-3Ozj3L_ix9dk41TEeaUICgjLvu-5sArKKCdjYh5AmRFrvu3rygLq7C4wgOFSA3cWWBFHgLtHkif2e30-E5zFhJqYcSiFQAEskjxTOhCWsS4_8E-PwgZc6OVkMYaTis7BpMXeJ3CcHVP22Nm4_2on3"
+                />
+                <div
+                  class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6"
+                >
+                  <button
+                    class="w-full bg-primary text-on-primary py-4 font-body font-semibold rounded-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center justify-center gap-2"
+                  >
+                    <span
+                      class="material-symbols-outlined text-sm"
+                      data-icon="shopping_cart"
+                      >shopping_cart</span
+                    >
+                    Quick Add
+                  </button>
+                </div>
+              </div>
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4
+                    class="font-headline font-bold text-lg leading-tight mb-1 group-hover:text-secondary transition-colors cursor-pointer"
+                  >
+                    Faceted Decanter
+                  </h4>
+                  <p class="font-body text-sm text-on-surface-variant">
+                    Mouth-blown Glass
+                  </p>
+                </div>
+                <p class="font-headline font-extrabold text-lg">$145</p>
+              </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="group relative flex flex-col">
+              <div
+                class="aspect-[4/5] bg-surface-container-low overflow-hidden rounded-xl mb-6 relative"
+              >
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Luxury tailored oversized wool coat in charcoal grey hanging in a minimalist walk-in closet with soft focus background"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeeXNiVW-o1P-Xe1YUsY31fHbcmqbQ3Fd-UjA6nt4gGPXTsIFWI2SiJqI5GumTFU_ALixzvK91WZIlr00ohsPJlYovCe89jjtiLnIe56n3FSw2m8yLK8cllEm1gCdVQrKgGxY0bYr1xM94rgpiZV3QQgcWNCt7oHyW8rRIwe2ZbAIiBZgNMYbRk96FcWeZt_JJWiHEeWqth1MTh_1MRibHyXFvb4HuBTv6Mz-qrwKe1rG1xaU_Xs-CEmN2Kt0gxOv44i1ghCHkr8dy"
+                />
+                <div
+                  class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6"
+                >
+                  <button
+                    class="w-full bg-primary text-on-primary py-4 font-body font-semibold rounded-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center justify-center gap-2"
+                  >
+                    <span
+                      class="material-symbols-outlined text-sm"
+                      data-icon="shopping_cart"
+                      >shopping_cart</span
+                    >
+                    Quick Add
+                  </button>
+                </div>
+              </div>
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4
+                    class="font-headline font-bold text-lg leading-tight mb-1 group-hover:text-secondary transition-colors cursor-pointer"
+                  >
+                    The Archive Overcoat
+                  </h4>
+                  <p class="font-body text-sm text-on-surface-variant">
+                    Ethical Italian Wool
+                  </p>
+                </div>
+                <p class="font-headline font-extrabold text-lg">$1,200</p>
+              </div>
+            </div>
+            <!-- Product Card 5 -->
+            <div class="group relative flex flex-col">
+              <div
+                class="aspect-[4/5] bg-surface-container-low overflow-hidden rounded-xl mb-6 relative"
+              >
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Modern sculptural floor lamp with warm glow in a dark minimalist living room interior with subtle shadows"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5QgU4iZABuzWyTAZ57JvkEvAJtHU1VY1-3NVhVeK540u7XXQghfOMEBS7O4pm3shspcxilCb2bmHefggTPXOi11ZqHL5CxGcRH5Luhz5DeKoX-RQw3pt-eAFq17PosmEXCcj5rZNVMPcb3NcQxK_P-vIM07v9CfS_FnnuIYCF7jAjYBl9JCSa3m_gzzpVXmti7GwHKkyYK3PLEamC2HuBM9Qtq3c1AEABtLDBZn5zc3pB-XQ2rTi6Ex_4-b9C3GEQAoGPWN-tHrjf"
+                />
+                <div
+                  class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6"
+                >
+                  <button
+                    class="w-full bg-primary text-on-primary py-4 font-body font-semibold rounded-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center justify-center gap-2"
+                  >
+                    <span
+                      class="material-symbols-outlined text-sm"
+                      data-icon="shopping_cart"
+                      >shopping_cart</span
+                    >
+                    Quick Add
+                  </button>
+                </div>
+              </div>
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4
+                    class="font-headline font-bold text-lg leading-tight mb-1 group-hover:text-secondary transition-colors cursor-pointer"
+                  >
+                    Linear Floor Beam
+                  </h4>
+                  <p class="font-body text-sm text-on-surface-variant">
+                    Matte Anodized Steel
+                  </p>
+                </div>
+                <p class="font-headline font-extrabold text-lg">$590</p>
+              </div>
+            </div>
+            <!-- Product Card 6 -->
+            <div class="group relative flex flex-col">
+              <div
+                class="aspect-[4/5] bg-surface-container-low overflow-hidden rounded-xl mb-6 relative"
+              >
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Premium organic cotton lounge set in cream white displayed elegantly on a surface-container-low background"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSOZs1TM2b2HvneN5pquj0YUnqyv-JyvOrDixw8OMyl-eDcamckM8qi3HMrdD2bDyP4zVtM5SfoVk3bujB2B_QcHf4DpHtDcjROFXyIxZ7ucjpcq3yTCB7ywZnp-oGQJn60yC6D4U7YPlTpPPv1rE1GBSPJvcYXxT5FMzOREhU49QfIrUSLiW12ZGsWPPD5olaN5km4AwL33vQ2HIz9Fh4jNWuGI7J8nYnlO4gpdHXAv9pmV_kzr52rLs1912fYO3oKljyKSRLdvty"
+                />
+                <div
+                  class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6"
+                >
+                  <button
+                    class="w-full bg-primary text-on-primary py-4 font-body font-semibold rounded-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center justify-center gap-2"
+                  >
+                    <span
+                      class="material-symbols-outlined text-sm"
+                      data-icon="shopping_cart"
+                      >shopping_cart</span
+                    >
+                    Quick Add
+                  </button>
+                </div>
+              </div>
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4
+                    class="font-headline font-bold text-lg leading-tight mb-1 group-hover:text-secondary transition-colors cursor-pointer"
+                  >
+                    Essentials Suite
+                  </h4>
+                  <p class="font-body text-sm text-on-surface-variant">
+                    100% GOTS Cotton
+                  </p>
+                </div>
+                <p class="font-headline font-extrabold text-lg">$210</p>
+              </div>
+            </div>
+          </div>
+          <!-- Pagination -->
+          <div class="mt-24 flex items-center justify-center gap-4">
+            <button
+              class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors disabled:opacity-30"
+              disabled=""
+            >
+              <span class="material-symbols-outlined" data-icon="chevron_left"
+                >chevron_left</span
+              >
+            </button>
+            <div class="flex items-center gap-2">
+              <button
+                class="w-12 h-12 flex items-center justify-center rounded-full bg-primary text-on-primary font-bold"
+              >
+                1
+              </button>
+              <button
+                class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors font-medium"
+              >
+                2
+              </button>
+              <button
+                class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors font-medium"
+              >
+                3
+              </button>
+              <span class="px-2">...</span>
+              <button
+                class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors font-medium"
+              >
+                12
+              </button>
+            </div>
+            <button
+              class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors"
+            >
+              <span class="material-symbols-outlined" data-icon="chevron_right"
+                >chevron_right</span
+              >
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-slate-50 dark:bg-slate-900 mt-24 py-12 px-8 tonal-shift bg-surface-container-low"
+    >
+      <div
+        class="flex flex-col md:flex-row justify-between items-center w-full max-w-7xl mx-auto gap-12"
+      >
+        <div class="space-y-6">
+          <div class="text-xl font-bold text-slate-950 dark:text-white">
+            Digital Atelier
+          </div>
+          <p class="font-body text-sm text-slate-500 max-w-xs leading-relaxed">
+            Curating architectural essentials for the modern living space.
+            Craftsmanship without compromise.
+          </p>
+        </div>
+        <div class="space-y-6">
+          <h5
+            class="font-headline font-bold text-sm uppercase tracking-widest text-slate-900 dark:text-slate-50"
+          >
+            Shop
+          </h5>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="font-body text-sm text-slate-500 hover:text-amber-600 transition-colors"
+                href="#"
+                >New Arrivals</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body text-sm text-slate-500 hover:text-amber-600 transition-colors"
+                href="#"
+                >Collections</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body text-sm text-slate-500 hover:text-amber-600 transition-colors"
+                href="#"
+                >Archive</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="space-y-6">
+          <h5
+            class="font-headline font-bold text-sm uppercase tracking-widest text-slate-900 dark:text-slate-50"
+          >
+            Company
+          </h5>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="font-body text-sm text-slate-500 hover:text-amber-600 transition-colors"
+                href="#"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body text-sm text-slate-500 hover:text-amber-600 transition-colors"
+                href="#"
+                >Terms of Service</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body text-sm text-slate-500 hover:text-amber-600 transition-colors"
+                href="#"
+                >Sustainability</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="space-y-6">
+          <h5
+            class="font-headline font-bold text-sm uppercase tracking-widest text-slate-900 dark:text-slate-50"
+          >
+            Atelier Update
+          </h5>
+          <div class="relative">
+            <input
+              class="w-full bg-transparent border-b-2 border-slate-200 focus:border-amber-600 py-2 font-body text-sm focus:outline-none transition-colors"
+              placeholder="email@example.com"
+              type="email"
+            />
+            <button
+              class="absolute right-0 top-1/2 -translate-y-1/2 opacity-100 hover:opacity-80 transition-opacity"
+            >
+              <span
+                class="material-symbols-outlined text-sm"
+                data-icon="arrow_forward"
+                >arrow_forward</span
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto px-8 py-8 border-t border-slate-200/50 mt-12 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p class="font-body text-sm text-slate-500">
+          © 2024 Digital Atelier. All rights reserved.
+        </p>
+        <div class="flex gap-6">
+          <span
+            class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-amber-600 transition-colors"
+            data-icon="brand_awareness"
+            >brand_awareness</span
+          >
+          <span
+            class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-amber-600 transition-colors"
+            data-icon="share"
+            >share</span
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

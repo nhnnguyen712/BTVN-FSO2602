@@ -1,0 +1,200 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fcf9f8;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.menu li {
+  cursor: pointer;
+  color: #64748b;
+  transition: 0.3s;
+}
+
+.menu li:hover {
+  color: black;
+}
+
+.menu .active {
+  border-bottom: 2px solid orange;
+  color: black;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions input {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  background: #f1f5f9;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url("https://picsum.photos/1600/900") center/cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+}
+
+.tag {
+  letter-spacing: 4px;
+  color: #ffdea5;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.desc {
+  max-width: 400px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 15px 30px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.dark {
+  background: black;
+  color: white;
+}
+
+.btn.light {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* PRODUCTS */
+.products {
+  padding: 80px 0;
+  background: #f6f3f2;
+}
+
+.section-header {
+  margin-bottom: 40px;
+}
+
+.product-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+}
+
+.card-img {
+  height: 300px;
+  background: #ddd;
+  margin-bottom: 10px;
+}
+
+/* COLLECTION */
+.collection .grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.big,
+.small {
+  position: relative;
+  height: 300px;
+  background: url("https://picsum.photos/600/400") center/cover;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+
+/* FOOTER */
+.footer {
+  padding: 40px 0;
+  background: #f6f3f2;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .product-grid {
+    flex-direction: column;
+  }
+
+  .collection .grid {
+    grid-template-columns: 1fr;
+  }
+}

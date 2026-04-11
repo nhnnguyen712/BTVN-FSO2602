@@ -1,0 +1,7 @@
+button,
+a {
+  cursor: pointer;
+}
+button {
+  padding: 12px 24px;
+}
